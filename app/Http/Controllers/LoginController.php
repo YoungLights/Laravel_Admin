@@ -10,7 +10,8 @@ class LoginController extends Controller
 	public function index() 
 	{
 		return view('pages.auth', [
-			'action' => 'login'
+			'action' => 'login', 
+			'title' => 'Login'
 		]);
 	}
 
@@ -23,8 +24,15 @@ class LoginController extends Controller
  
 		if (Auth::attempt($credentials)) {
 			$request->session()->regenerate();
- 
 			return redirect()->intended('dashboard');
 		}
+	}
+
+	public function logout(Request $request)
+	{
+		Auth::logout();
+		$request->session()->invalidate();
+		$request->session()->regenerateToken();
+		return redirect()->route('login');
 	}
 }

@@ -14,6 +14,88 @@ a, button, input {
   transition: all 0.1s ease-in-out;
 }
 
+a {
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 0.2fr 1.8fr;
+}
+
+.header {
+  background: #dadfe7;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-avatar {
+  display: flex;
+  align-items: center;
+}
+.header-avatar p {
+  font-size: 0.9rem;
+  margin-right: 15px;
+}
+
+.avatar-circle {
+  height: 35px;
+  width: 35px;
+  background: #9ca6bb;
+  border-radius: 50%;
+}
+
+.nav {
+  background: #1A2029;
+  height: 100vh;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.nav-logo img {
+  width: 45px;
+}
+
+.nav-links {
+  margin-top: 40px;
+}
+.nav-links a {
+  display: flex;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.7rem;
+  padding: 10px;
+}
+.nav-links a i {
+  width: 20px;
+}
+
+.nav-logout {
+  width: 80%;
+  position: absolute;
+  bottom: 40px;
+}
+.nav-logout button {
+  padding: 13px 20px;
+  background: #00c0e9;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+
 .auth {
   display: flex;
   justify-content: center;

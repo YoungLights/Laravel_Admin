@@ -1,5 +1,5 @@
 <!-- PAGE TITLE -->
-<title>Young Lights CMS</title>
+<title>Young Lights CMS • {{$title}}</title>
 
 <!-- META INFORMATION -->
 <meta charset='UTF-8'>
