@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;900&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+a, button, input {
+  transition: all 0.1s ease-in-out;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.auth img {
+  width: 350px;
+  margin-bottom: 40px;
+}
+.auth .form {
+  width: 25%;
+}
+
+.form input, .form textarea, .form button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+  padding: 14px;
+  filter: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-progress-appearance: none;
+}
+.form input, .form textarea {
+  border: solid 1px #9ca6bb;
+  color: #282D38;
+  width: 100%;
+}
+.form input:-webkit-autofill, .form textarea:-webkit-autofill {
+  background: #fff;
+}
+.form input:autofill, .form textarea:autofill {
+  background: #fff;
+}
+.form input:focus, .form textarea:focus {
+  background: #ffffff;
+  box-shadow: inset 0px 0px 0px 1px #00c0e9;
+  border: solid 1px #00c0e9;
+}
+.form button {
+  background: #00c0e9;
+  border: solid 1px #00c0e9;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.form button:hover {
+  background: #000000;
+  border: solid 1px #000000;
+}
+.form label {
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  display: flex;
+}
+.form label i {
+  margin: 0px 5px;
+  color: #00c0e9;
+}
+
+.form-item + .form-item {
+  margin-top: 20px;
+}
