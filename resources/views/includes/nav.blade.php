@@ -1,6 +1,6 @@
 <nav class="nav">
 	<a href="/dashboard" class="nav-logo">
-		<img src="{{asset('img/logo/yl-logo-white-reduce.png')}}">
+		<img src="{{asset('img/logo/yl-logo-blue-reduce.png')}}">
 	</a>
 	<div class="nav-links">
 		<a href="/dashboard"><i class="fa-solid fa-file"></i>Dashboard</a>
