@@ -1,25 +1,14 @@
 @extends('layouts.auth')
 
-@section('content')
-	<img src="{{asset('img/logo/yl-logo-blue.png')}}">
+@section('form')
 	<form class="form" method="POST" action="{{$action}}">
 		@csrf
+		<header class="auth-header"><i class="fa-solid fa-pencil"></i><h4>{{$title}}</h4></header>
 		@if (Route::is('register'))
-			<div class="form-item">
-				<label><i class="fa-solid fa-user"></i>Username</label>
-				<input type="text" name="username" @error('username') placeholder="{{$message}}" @enderror value="{{old('username')}}">
-			</div>
+			<x-form-item name="username" text="Username" icon="fa-solid fa-user"></x-form-item>
 		@endif
-		<div class="form-item">
-			<label><i class="fa-solid fa-envelope"></i>Email</label>
-			<input type="text" name="email" @error('email') placeholder="{{$message}}" @enderror>
-		</div>
-		<div class="form-item">
-			<label><i class="fa-solid fa-lock"></i>Password</label>
-			<input type="password" name="password" @error('password') placeholder="{{$message}}" @enderror>
-		</div>
-		<div class="form-item">
-			<button>Login</button>
-		</div>
+		<x-form-item name="email" text="E-Mail" icon="fa-envelope"></x-form-item>
+		<x-form-item type="password" name="password" text="Passwort" icon="fa-lock"></x-form-item>
+		<button class="form-submit" type="submit">jetzt einloggen</button>
 	</form>
 @endsection

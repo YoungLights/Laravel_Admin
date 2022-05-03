@@ -1,13 +1,67 @@
 .auth
+	display: grid
+	grid-template-columns: 1.1fr 0.9fr
+	justify-content: center
+	align-items: center
+	height: 100%
+
+.auth-form
+	padding: 50px 100px
+	height: 100%
+
+	.form
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		margin-top: -30px
+
+.auth-help
+	position: relative
+	text-align: right
+	width: 100%
+
+	a
+		font-size: 1.5rem
+		color: $dark
+
+		&:hover
+			color: $blue
+
+.auth-header
+	margin-bottom: 80px
+	display: flex
+	align-items: center
+	justify-content: center
+	
+	h4
+		font-size: 1.7rem
+		font-weight: 300
+
+	i
+		margin-right: 10px
+		color: $purple
+		font-size: 1.3rem
+
+.auth-title
+	position: relative
 	display: flex
 	justify-content: center
 	align-items: center
-	flex-direction: column
+	overflow: none
 	height: 100%
+	background: $dark
 
-	img
-		width: 350px
-		margin-bottom: 40px
+.auth-bg
+	position: absolute
+	width: 100%
+	height: 100%
+	inset: 0
+	object-fit: cover
+	object-position: center center
+	opacity: 0.7
 
-	.form
-		width: 25%
+.auth-logo
+	width: 150px
+	position: relative
+	z-index: 200

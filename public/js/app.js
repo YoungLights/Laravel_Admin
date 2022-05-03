@@ -7,7 +7,25 @@
   \*****************************/
 /***/ (() => {
 
+// PASSWORD VISIBLE
+var showPassword = function showPassword() {
+  var input = document.querySelector('.form-item-password input');
+  var icon = document.querySelector('.form-item-password i');
+  var state = false;
+  icon.addEventListener('click', function () {
+    if (state) {
+      input.type = 'password';
+      icon.setAttribute('class', 'fa-solid fa-eye-slash');
+    } else {
+      input.type = 'text';
+      icon.setAttribute('class', 'fa-solid fa-eye');
+    }
 
+    state = !state;
+  });
+};
+
+showPassword();
 
 /***/ }),
 

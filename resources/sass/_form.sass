@@ -1,20 +1,24 @@
 .form
-	input, textarea, button
+	input, textarea, button, select
 		font-family: $main-font
 		font-size: 0.8em
 		transition: all 0.2s ease-in-out
 		border-radius: 5px
-		padding: 14px
+		padding: 16px
 		filter: none
 		outline: none
 		-moz-appearance: none
 		-webkit-appearance: none
 		-ms-progress-appearance: none
 
-	input, textarea
+	input, textarea, select
 		border: solid 1px $grey
 		color: $midgrey
 		width: 100%
+
+		&.error
+			box-shadow: inset 0px 0px 0px 2px $red
+			border-color: $red
 
 		&:autofill
 			background: #fff
@@ -24,18 +28,20 @@
 			box-shadow: inset 0px 0px 0px 1px $blue
 			border: solid 1px $blue
 
-	button
-		background: $blue
-		border: solid 1px $blue
+.form-submit
+	border: none
+	color: $white
+	background: $purple
+	font-weight: 700
+	cursor: pointer
+	width: auto
+	margin-top: 20px
+
+	&:hover
+		background: $dark
 		color: $white
-		width: 100%
-		text-align: center
-		cursor: pointer
 
-		&:hover
-			background: $black
-			border: solid 1px $black
-
+.form-item
 	label
 		text-transform: uppercase
 		font-size: 0.65rem
@@ -49,3 +55,14 @@
 
 .form-item + .form-item
 	margin-top: 20px
+
+.form-item-password
+	position: relative
+	display: flex
+	align-items: center
+
+	i
+		cursor: pointer
+		position: absolute
+		right: 20px
+		color: $grey

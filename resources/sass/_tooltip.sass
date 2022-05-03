@@ -1,0 +1,85 @@
+.tooltip
+	position: relative
+	display: inline-flex
+	align-items: center
+
+	&:hover
+		.tooltip-text
+			opacity: 1
+			transform: translate(0px, 0px)
+
+.tooltip-text
+	position: absolute
+	background: $dark
+	padding: 15px 20px
+	color: $white
+	font-weight: 700
+	font-size: 0.8rem
+	border-radius: 10px
+	display: flex
+	align-items: center
+	justify-content: center
+	white-space: nowrap
+	opacity: 0
+	pointer-events: none
+	transition: all 0.2s ease-in-out
+
+	&::after
+		content: ""
+		position: absolute
+
+.tooltip-left
+	.tooltip-text
+		transform: translate(-20px, 0px)
+		right: 100%
+		margin-right: 20px
+		
+		&::after
+			left: 100%
+			margin-left: -5px
+			border-width: 10px
+			border-style: solid
+			border-color: transparent transparent transparent $dark
+
+.tooltip-right
+	.tooltip-text
+		transform: translate(20px, 0px)
+		left: 100%
+		margin-left: 20px
+		
+		&::after
+			right: 100%
+			margin-right: -5px
+			border-width: 10px
+			border-style: solid
+			border-color: transparent $dark transparent transparent
+
+.tooltip-bottom
+	flex-direction: column
+
+	.tooltip-text
+		transform: translate(0, -20px)
+		top: 100%
+		margin-top: 20px
+
+		&::after
+			bottom: 100%
+			margin-bottom: -5px
+			border-width: 10px
+			border-style: solid
+			border-color: transparent transparent $dark transparent
+
+.tooltip-top
+	flex-direction: column
+
+	.tooltip-text
+		transform: translate(0, -20px)
+		bottom: 100%
+		margin-bottom: 20px
+
+		&::after
+			top: 100%
+			margin-top: -5px
+			border-width: 10px
+			border-style: solid
+			border-color: $dark transparent transparent transparent 
